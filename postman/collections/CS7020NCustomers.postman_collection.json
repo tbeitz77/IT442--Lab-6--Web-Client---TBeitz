@@ -1,0 +1,142 @@
+{
+  "info": {
+    "_postman_id": "64259274-7a37-49e0-887a-256b769deb5e",
+    "name": "CS7020NCustomers",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60214843",
+    "_collection_link": "https://go.postman.co/collection/60214843-64259274-7a37-49e0-887a-256b769deb5e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All Customers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/customers",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get A Customer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/customers/86",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "customers",
+            "86"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add A Customer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customerId\": 710,\r\n    \"name\": \"Jannifer, Morvis\",\r\n    \"address\": \"123 Hellcat rd\",\r\n    \"city\": \"Sacramento\",\r\n    \"state\": \"Ca\",\r\n    \"zipCode\": \"12345\",\r\n    \"stateNavigation\": null,\r\n    \"invoices\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7020/api/customers/710",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "customers",
+            "710"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete A Customer",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customerId\": 710,\r\n    \"name\": \"Jannifer, Morvis\",\r\n    \"address\": \"123 Hellcat rd\",\r\n    \"city\": \"Sacramento\",\r\n    \"state\": \"Ca\",\r\n    \"zipCode\": \"12345\",\r\n    \"stateNavigation\": null,\r\n    \"invoices\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7020/api/customers/728",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "customers",
+            "728"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update A Customer",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customerId\": 710,\r\n    \"name\": \"Jannifer, Morvis\",\r\n    \"address\": \"123 Hellcat rd\",\r\n    \"city\": \"Sacramento\",\r\n    \"state\": \"Ca\",\r\n    \"zipCode\": \"12345\",\r\n    \"stateNavigation\": null,\r\n    \"invoices\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7020/api/customers/728",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "customers",
+            "728"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

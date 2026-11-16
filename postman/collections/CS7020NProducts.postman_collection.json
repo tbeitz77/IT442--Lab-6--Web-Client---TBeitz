@@ -1,0 +1,115 @@
+{
+  "info": {
+    "_postman_id": "49697d59-0d77-41a7-9d62-22a42c904a3b",
+    "name": "CS7020NProducts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60214843",
+    "_collection_link": "https://go.postman.co/collection/60214843-49697d59-0d77-41a7-9d62-22a42c904a3b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/products",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get A Product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/products/VB10",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "products",
+            "VB10"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add A Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/products/VB10",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "products",
+            "VB10"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete A Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/products/VB10",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "products",
+            "VB10"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update A Product",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/products/VB10",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "products",
+            "VB10"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

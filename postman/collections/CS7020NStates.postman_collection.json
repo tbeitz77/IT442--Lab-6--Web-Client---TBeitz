@@ -1,0 +1,143 @@
+{
+  "info": {
+    "_postman_id": "b40738a8-afcb-43db-8881-d8a5736cda98",
+    "name": "CS7020NStates",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60214843",
+    "_collection_link": "https://go.postman.co/collection/60214843-b40738a8-afcb-43db-8881-d8a5736cda98?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All States",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/states",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "states"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get One State",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/states/**",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "states",
+            "**"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete A State",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7020/api/states/**",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "states",
+            "**"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add A State",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"stateCode\": \"**\",\r\n    \"stateName\": \"Test??\",\r\n    \"customers\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7020/api/states",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "states"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update A State",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"stateCode\": \"OR\",\r\n    \"stateName\": \"Ore\",\r\n    \"customers\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7020/api/states/OR",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7020",
+          "path": [
+            "api",
+            "states",
+            "OR"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
