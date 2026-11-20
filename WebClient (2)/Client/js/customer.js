@@ -8,10 +8,10 @@ class CustomerPage {
     };
 
     // instance variables that the app needs but are not part of the "state" of the application
-    this.server = "http://localhost:5008/api"
+    this.server = "http://localhost:5008/api" //changed it from port 5000 to 5008 because that is the http port my API listens on. HTTPS keep bring up the REST API since i am working on newer program and IIS Express does not want to work in this new version
     this.url = this.server + "/customers";
 
-    // instance variables related to ui elements simplifies code in other places
+    // instance variables related to ui elements simplifies code in other places - ui is the user interface 
     this.$form = document.querySelector('#customerForm');
     this.$customerId = document.querySelector('#customerId');
     this.$customerName = document.querySelector('#name');
@@ -84,9 +84,10 @@ class CustomerPage {
     this.$customerState.innerHTML = stateHtml;
   }
 
-  // creates the option for one state
+    // creates the option for one state
+    //modified since my Lab 5 retured cutomser's state code as state and not statecode so changed to match 
   loadState(state, index) {
-    return `<option value=${state.stateCode} ${(this.state.customer && this.state.customer.state == state.stateCode)?"selected":""}>${state.stateName}</option>`;
+    return `<option value=${state.stateCode} ${(this.state.customer && this.state.customer.state == state.stateCode)?"selected":""}>${state.stateName}</option>`; //fist this.state is the page's state object and the .customer.state is the customer's 2 letter state code
   }
 
   // makes an api call to /api/customer/# where # is the primary key of the customer
@@ -164,7 +165,7 @@ class CustomerPage {
           state: this.$customerState.value,
           zipCode: this.$customerZipcode.value,
           invoices: [], 
-          stateNavigation: null
+          stateNavigation: null //set to null since state rows already exist and any dublicates would cause it to fail with duplicate key error. 
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -209,7 +210,8 @@ class CustomerPage {
         }
       })
       .then(response => {
-        // doesn't return a body just a status code of 204 
+          // doesn't return a body just a status code of 204
+          //the scaffold created the Delete enpoint returns 204 number w / no body - which means the customer was removed ad the form is cleared 
         if (response.status == 204)
         {
           this.state.customer = Object.assign(customer);
@@ -268,7 +270,7 @@ class CustomerPage {
       this.enableButtons("found");
     }
   }
-
+  
   // fills the form with data based on the customer
   fillCustomerFields() {
     // fill the fields
@@ -280,7 +282,7 @@ class CustomerPage {
     this.makeFieldsReadOnly();
   }
 
-  // clears the ui
+  // clears the ui -- ui means user interface 
   clearCustomerFields() {
     this.$customerName.value = "";
     this.$customerAddress.value = "";
